@@ -1,0 +1,231 @@
+.section-services-padding {
+  transition: padding-top 0.5s ease;
+  padding-top: 200px;
+  background-color: rgb(246, 243, 234);
+}
+
+footer .footer-bg-color {
+  background-color: #5a5d36;
+}
+
+footer .footer-text-color {
+  color: #ffffff;
+  text-align: center;
+}
+
+.section-services-padding.half-padding {
+  padding-top: 16px;
+}
+
+.section-services-padding.half-padding .services-ctas-container {
+  margin-top: 16px;
+}
+
+.services-title {
+  font-size: 20px;
+  font-family: "Kaisei Tokumin", sans-serif;
+  color: black;
+  text-align: center;
+}
+
+.services-ctas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 20px;
+  padding: 0px 24px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#adult-cta {
+  background: url("./assets/images/adult-btn-bg.png");
+  background-position: unset;
+  color: black;
+}
+#adult-cta.half-height {
+  background-position: center;
+}
+
+#child-cta {
+  background: url("./assets/images/child-btn.png");
+  background-position: center;
+  color: black;
+}
+
+.service-cta {
+  width: 314px;
+  height: 91px;
+  text-align: center;
+  border: 2px solid #9c9b6d;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  font-family: "Kaisei Tokumin", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  align-items: center;
+  transition: height 0.5s ease, background-color 0.5s ease; /* Smooth transition */
+}
+
+.half-height {
+  height: 50px !important; /* Half height with important to override inline style */
+}
+
+.green-bg {
+  background-color: #777250;
+}
+
+.carousel-container {
+  display: none;
+  width: 533px;
+  height: 588px;
+  perspective: 1000px;
+  margin: 50px auto;
+}
+
+#child-carousel-container,
+#adult-carousel-container {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-container-mobile {
+  display: block;
+  height: calc(100% - 190px);
+  padding: 24px;
+  overflow: hidden;
+  padding-bottom: 12px;
+}
+
+.carousel .service-info-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: transform 0.5s, opacity 0.5s;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 26px;
+}
+.carousel .service-info-container.center {
+  z-index: 100;
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+.carousel .service-info-container.left,
+.carousel .service-info-container.right {
+  opacity: 0.5;
+  transform: translateX(-50%) scale(0.7);
+}
+
+.carousel .service-info-container.right {
+  opacity: 0.5;
+  transform: translateX(50%) scale(0.7);
+}
+
+.hide {
+  display: none;
+}
+
+.pagination {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.pagination-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #aaa;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.pagination-dot.active {
+  background-color: #333;
+}
+.service-info-container {
+  width: 500px;
+  height: 572px;
+  padding: 12px 102px 23px 102px;
+}
+
+.footer-title {
+  color: white !important;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .services-ctas-container {
+    flex-direction: row;
+    gap: 24px;
+    margin-top: 80px;
+    padding: 20px 120px;
+    justify-content: center;
+  }
+  .service-cta {
+    width: 345px;
+    height: 147px;
+    font-size: 28px;
+  }
+  .services-title {
+    font-size: 32px;
+  }
+  .half-height {
+    height: 75px !important; /* Half height with important to override inline style */
+  }
+  .carousel-container {
+    display: block;
+    height: calc(100% - 279px);
+    max-height: 571px;
+    width: 420px;
+  }
+  .carousel-container-mobile {
+    display: none;
+    padding: 24px;
+  }
+  .carousel .service-info-container {
+    padding: 16px 42px 24px 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .section-services-padding {
+    padding-top: 200px;
+  }
+  .carousel-container {
+    width: 533px;
+  }
+  .carousel .service-info-container {
+    padding: 16px 56px 24px 56px;
+  }
+  .service-cta {
+    width: 404px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .service-cta {
+    width: 404px;
+    height: 147px;
+  }
+  .half-height {
+    height: 100px !important; /* Half height with important to override inline style */
+  }
+}
+
+footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  max-width: 150px;
+}
